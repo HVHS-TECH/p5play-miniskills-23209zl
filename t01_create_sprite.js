@@ -9,8 +9,8 @@
 /*******************************************************/
 function setup() {
 	console.log("setup: ");
-cnv = new Canvas(1000, 1000);
-Bob= new Sprite(100, 100, 100, 100);
+cnv = new Canvas(900, 900);
+Bob= new Sprite(100, 100, 100,);
 Bob.color = 'yellow';
 }
 	
