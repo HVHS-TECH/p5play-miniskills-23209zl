@@ -47,7 +47,7 @@ function setup() {
 
 	for (i = 0; i < 100; i++) {
 
-		alien = new Sprite();
+		alien = new Sprite(width / 3, height / 3, 40, 40);
 
 		alien.vel.x = 3;
 
@@ -62,29 +62,25 @@ function setup() {
 		// Register a callback:
 
 		// if any alien in alienGroup collides with ball_1, call func2Call
-
-		alienGroup.collides(ball_1, func2Call);
-
-		function func2Call(alien, _ball_1) {
-
-			// Delete the alien which was hit
-
-			alien.remove();
-
-		}
-
-
 	}
+
 }
-
-
-
 
 /*******************************************************/
 // draw()
 /*******************************************************/
 function draw() {
 	background('lightblue');
+
+	alienGroup.collides(ball_1, func2Call);
+
+	function func2Call(alien, _ball_1) {
+
+		// Delete the alien which was hit
+
+		alien.remove();
+
+	}
 }
 
 /*******************************************************/
