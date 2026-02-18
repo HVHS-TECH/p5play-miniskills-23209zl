@@ -14,8 +14,6 @@
 
 		imgFace = loadImage('/smile.jpg');
 
-		background(imgBG);
-
 	}
 
 function setup() {
@@ -89,7 +87,8 @@ function setup() {
 // draw()
 /*******************************************************/
 function draw() {
-	background('lightblue');
+ 
+	background(imgBG);
 
 	alienGroup.collides(ball_1, func2Call);
 
