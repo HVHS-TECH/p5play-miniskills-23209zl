@@ -3,23 +3,30 @@
 // Create a sprite
 /// Written by ???
 /*******************************************************/
-	
+
 /*******************************************************/
 // setup()
 /*******************************************************/
 function setup() {
 	console.log("setup: ");
-cnv = new Canvas(900, 900);
-Bob= new Sprite(100, 100, 100,);
-Bob.color = 'yellow';
+	cnv = new Canvas(900, 900);
+
+	for (var i1 = 0; i1 < 10; i1++) {
+		spriteColor = color(random(255), random(255), random(255))
+		blockHeight = i1 * 100 + 69
+		for (var i2 = 0; i2 < 10; i2++) {
+			var block = new Sprite(i2 * 100 + 60, blockHeight + 60, 50, 50);
+			block.color = spriteColor
+		}
+	}
 }
-	
+
 
 /*******************************************************/
 // draw()
 /*******************************************************/
 function draw() {
-background('lightblue'); 
+	background('lightblue');
 }
 
 /*******************************************************/
